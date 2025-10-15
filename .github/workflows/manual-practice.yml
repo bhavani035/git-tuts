@@ -1,0 +1,20 @@
+name: Manual Practice workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+    name:
+      description: 'sankar'
+      required: true
+      default: 'developer'
+    task:
+      description: 'task to perfrom'
+      required: false
+  jobs:
+    say-hello:
+      runs-on: ubuntu-latest
+    steps:
+      -name: Greet the user
+      run: |
+        echo "hello, ${{github.event.inputs.name}}!"
+        echo "you want to perform: ${{ github.event.inputs.task }}"
