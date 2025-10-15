@@ -13,8 +13,8 @@ on:
 jobs:
   say-hello:
     runs-on: ubuntu-latest
-     steps:
-        - name: Greet the user
+    steps:
+      - name: Greet the user
         run: |
           echo "hello, ${{github.event.inputs.name}}!"
           echo "you want to perform: ${{ github.event.inputs.task }}"
